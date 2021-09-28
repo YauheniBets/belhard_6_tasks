@@ -44,8 +44,6 @@ def bread(func):
         result = func()
         print('<\\____________/>')
         return result
-
-
     return wrapper
 
 def tomato(func):
