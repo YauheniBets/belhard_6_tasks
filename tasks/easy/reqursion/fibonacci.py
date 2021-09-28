@@ -7,5 +7,5 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-for i in range(50):
+for i in range(20):
     print(fibonacci(i))
