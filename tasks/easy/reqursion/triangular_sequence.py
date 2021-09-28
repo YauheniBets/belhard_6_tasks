@@ -25,9 +25,12 @@ n = 6:
 666666
 """
 
-def triang(i, current = 0):
+
+def triangular(i, current=0):
     if current <= i:
         print(str(current) * current)
-        return triang(i, current + 1)
-    return ''
-print(triang(6))
+        return triangular(i, current + 1)
+    return str(current) * current
+
+
+print(triangular(6))
