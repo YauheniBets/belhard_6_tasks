@@ -20,3 +20,37 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+def incr_students(data: dict, name_of_class: str):
+    data[name_of_class] += 1
+    return data
+print(incr_students(school_data, '1a'))
+
+def decr_students(data: dict, name_of_class: str):
+    if data[name_of_class] != 0:
+        data[name_of_class] -= 1
+        return data
+    raise RuntimeError('В классе нет учеников')
+print(decr_students(school_data, '1a'))
+
+def add_class(data: dict, name_of_class: str):
+    if name_of_class not in data:
+        data[name_of_class] = 0
+        return data
+    raise ('Такой класс уже в списке')
+print(add_class(school_data, '3a'))
+
+def remove_class(data: dict, name_of_class: str):
+    if name_of_class in data:
+        data.pop(name_of_class)
+        return data
+    raise KeyError('Такого класса нет в списке')
+print(remove_class(school_data, '3a'))
+
+def calc_students(data: dict):
+    data = sum(data.values())
+    return data
+print(calc_students(school_data))
+
+
+
+

@@ -24,3 +24,13 @@ n = 6:
 55555
 666666
 """
+
+
+def triangular(i, current=0):
+    if current <= i:
+        print(str(current) * current)
+        return triangular(i, current + 1)
+    return str(current) * current
+
+
+print(triangular(6))
